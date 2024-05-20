@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* HEADER */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #031f05;
+    justify-content: space-between;
+    color: #000000;
+    padding: 1.5% 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+h1{
+    margin-left: 1%;
+}
+
+h1, .redirect a{
+    color: #fff;
+}
+
+.redirects {
+    display: inherit;
+    padding: 0;
+    width: 20%;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 18px;
+}
+
+.redirect a:hover{
+    cursor: pointer;
+    color: #7cdb82;
+}
+
+/* MAIN */
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    margin: 3% auto;
+    border: 1px solid #031f05;
+    box-shadow: 8px 18px 9px -8px rgba(0, 0, 0, 0.5);
+    
+}
+h2{
+    font-size: 28px;
+    color: #031f05;
+}
+
+form, .inputs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+form{
+    width: 60%;
+    margin: 2% auto;
+
+}
+
+.inputs{
+    padding: 4%;
+}
+
+input, button, select, label{
+    font-size: 18px;
+    margin: 2%;
+}
+
+select{
+    padding: 1%;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px;               
+    outline: none;
+}
+
+input:focus {
+    border-bottom: 2px solid #031f05;
+}
+
+.tyc{
+    font-size: 13px;
+}
+
+.enviar{
+    background-color: #7cdb82;
+    border: #031f05 1px solid;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    background-color: #7cdb82;
+    color: #000000;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    cursor: pointer;
+    background-color: #031f05;
+    color: white;
+}
+
+.cancelar{
+    background-color: #db7c7c;
+    border: 1px solid #1f0303;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    outline: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.cancelar:hover{
+    cursor: pointer;
+    background-color: #1f0303;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(90, 136, 0, 0.51);
+    color: #000000;
+    padding: 1.5% 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+footer p,
+.logo,
+.links {
+    color: #031f05;
+    margin: auto;
+}
+
+.logo {
+    font-size: 32px;
+    text-align: center;
+    width: 45%;
+}
+
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link {
+    font-size: 16px;
+    width: 100%;
+    margin: 0 10px;
+    padding: 2%;
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #031f05;
+}
+
+.copyright {
+    font-size: 14px;
+    justify-self: end;
+    align-self: end;
+}

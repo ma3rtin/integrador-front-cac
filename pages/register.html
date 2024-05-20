@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/register.css">
+    <link rel="shortcut icon" href="/assets/images/icon.ico" type="image/x-icon">
+    <script
+      src="https://kit.fontawesome.com/73d4e66af6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Green Land</title>
+</head>
+<body>
+    <nav>
+        <h1 id="title">Green land <i class="fa-solid fa-leaf"></i></h1>
+        <ul class="redirects">
+            <li class="redirect"><a href="../index.html">Inicio</a></li>
+            <li class="redirect"><a href="./login.html">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+<main>
+    <div class="container">
+        <form action="">
+            <h2 class="formTitle">Registrate</h2>
+            <div class="inputs">
+                <input type="text" placeholder="Nombre" required>
+                <input type="text" placeholder="Apellido" required>
+                <input type="email" placeholder="Correo electrónico" required >
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Confirmar contraseña" required >
+                <label for="genero">Género</label>
+                <select name="genero" id="genero" required>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <label class="tyc">
+                    <input type="checkbox" name="terms" required>
+                    He leído y acepto los términos y condiciones.
+                  </label>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="enviar">Enviar</button>
+                <button type="reset" class="cancelar">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</main>
+<footer>
+    <a href="#title" class="logo">Green land <i class="fa-solid fa-leaf"></i></a>
+    <ul class="links">
+      <li class="link"><i class="fa-brands fa-facebook-f"></i> Facebook</li>
+      <li class="link"><i class="fa-brands fa-twitter"></i> Twitter</li>
+      <li class="link"><i class="fa-brands fa-instagram"></i> Instagram</li>
+    </ul>
+    <p class="copyright">© 2024 Green Land. Todos los derechos reservados</p>
+  </footer>
+</body>
+</html>

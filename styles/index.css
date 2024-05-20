@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+nav {
+    background-image: url("/assets/images/IMG_9762-scaled-1200x400.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0));
+}
+
+.redirects,
+.nav_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+
+}
+
+nav a,
+i {
+    margin: 0 10px;
+    color: #031f05;
+
+}
+
+.nav_buttons a:hover {
+    color: rgba(90, 136, 0, 0.51);
+}
+
+
+.redirects {
+    width: 70%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffff;
+    padding: 10px 0px;
+}
+
+h1 {
+    font-family: 'Chelsea Market', 'Montserrat', sans-serif;
+    justify-content: center;
+    text-align: center;
+    font-size: 70px;
+    color: #031f05;
+    margin: 5% 0 0 1%;
+    opacity: 1;
+}
+
+h2 {
+    justify-content: center;
+    text-align: center;
+    color: #031f05;
+    padding-bottom: 4%;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1% 0;
+}
+
+.info p {
+    padding: 2%;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgba(201, 201, 201, 0.22);
+    color: rgb(82, 80, 80);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.315);
+    margin: auto;
+}
+
+
+
+/* MAIN */
+
+.plants img {
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+.plants {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+
+.plant {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1%;
+    margin: 4% auto;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    background-color: rgba(201, 201, 201, 0.22);
+}
+
+.plant:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.plant img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.titlePlant {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 2% 0;
+}
+
+.buyPlant {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2%;
+}
+
+.buy {
+    background-color: #50b959;
+    color: #ffff;
+    border: none;
+    padding: 1% 2%;
+    border-radius: 5px;
+}
+
+.buy:hover {
+    cursor: pointer;
+    background-color: #098013;
+    color: #ffff;
+}
+
+.tips {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4% 0;
+    color: rgb(41, 39, 39);
+    ;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.tip img {
+    max-width: 550px;
+    margin-bottom: 2%;
+    opacity: 0.9;
+}
+
+.tip img:hover,
+.tipTitle:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.7;
+}
+
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(90, 136, 0, 0.51);
+    color: #000000;
+    padding: 1.5% 0;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+}
+
+footer p,
+.logo,
+.links {
+    color: #031f05;
+    margin: auto;
+}
+
+.logo {
+    font-size: 32px;
+    text-align: center;
+    width: 45%;
+}
+
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link {
+    font-size: 16px;
+    width: 100%;
+    margin: 0 10px;
+    padding: 2%;
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #031f05;
+}
+
+.copyright {
+    font-size: 14px;
+    justify-self: end;
+    align-self: end;
+}
+
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        flex-direction: row;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .redirects {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+        font-weight: inherit;
+    }
+
+    .nav_buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 60px;
+        margin: 2% 0;
+    }
+
+    h2 {
+        font-size: 28px;
+        padding-bottom: 2%;
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2% 0;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+
+    .plants {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 2%;
+    }
+
+    .plant {
+        margin: 2%;
+    }
+
+    .tips {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tip img {
+        max-width: 80%;
+        margin-bottom: 2%;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        padding: 2%;
+        width: 100%;
+    }
+
+    .logo {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .link {
+        margin: 10px 0;
+    }
+
+    .copyright {
+        font-size: 14px;
+        justify-self: center;
+        align-self: center;
+        padding: 2%;
+    }
+}
+
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .redirects {
+        display: none;
+    }
+
+    .nav_buttons {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin: 2% 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        padding-bottom: 2%;
+    }
+
+    .info {
+        display: none;
+    }
+
+    .plants {
+        grid-template-columns: 1fr;
+    }
+
+    .tips {
+        flex-direction: column;
+    }
+
+    .tip img {
+        max-width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2%;
+    }
+
+    .logo {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
