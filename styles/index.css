@@ -16,7 +16,7 @@ a {
 
 /* HEADER */
 nav {
-    background-image: url("/assets/images/IMG_9762-scaled-1200x400.jpg");
+    background-image: url("../assets/images/IMG_9762-scaled-1200x400.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.9;
