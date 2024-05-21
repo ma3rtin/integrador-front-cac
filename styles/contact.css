@@ -1,0 +1,9 @@
+form input{
+    width: 60%;
+}
+
+form select{
+    width: 60%;
+    height: 3em;
+    margin-bottom: 1rem;
+}
