@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="/styles/contact.css">
     <link
       rel="shortcut icon"
       href="/assets/images/icon.ico"
@@ -20,30 +21,64 @@
       <h1 id="title">Green land <i class="fa-solid fa-leaf"></i></h1>
       <ul class="redirects">
         <li class="redirect"><a href="../index.html">Inicio</a></li>
-        <li class="redirect"><a href="./register.html">Registrarme</a></li>
       </ul>
     </nav>
     <main>
       <div class="container">
-        <h2>Iniciar sesión</h2>
-        <form action="../index.html">
+        <h2>Contactanos</h2>
+        <form action="#">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Apellido y Nombre"
+          >
+          <div>
+            <input type="radio" name="sex" value="m">
+            <label>Masculino</label>
+            <input type="radio" name="sex" value="f">
+            <label>Femenino</label>
+            <input type="radio" name="sex" value="o">
+            <label>Otro</label>
+          </div>
+
+
           <input
             type="email"
             name="email"
             id="email"
-            placeholder="Correo electrónico"
+            placeholder="Correo Electronico"
           >
           <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Contraseña"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="Telefono"
           >
-          <div>
-            <input type="checkbox" name="recordar" id="recordar">
-            <label for="recordar">Recordarme</label>
-          </div>
-          <button type="submit" id="ingresar">Ingresar</button>
+
+          <select name="country" id="country">
+            <option value="arg">Argentina</option>
+            <option value="ur">Uruguay</option>
+            <option value="br">Brasil</option>
+            <option value="cl">Chile</option>
+          </select>
+
+          <textarea
+          name="message"
+          id="message"
+          placeholder="Mensaje"
+          cols="30"
+          rows="5"
+          ></textarea>
+          <br>
+          <h4>Inserte una Imagen</h4>
+          <input
+          type="file"
+          name="file"
+          id="file"
+          >
+
+          <button type="submit" id="send">Enviar Mensaje</button>
         </form>
       </div>
 
