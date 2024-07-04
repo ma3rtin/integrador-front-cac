@@ -21,16 +21,16 @@
     </nav>
 <main>
     <div class="container">
-        <form action="#">
+        <form action="#" id="form">
             <h2 class="formTitle">Registrate</h2>
             <div class="inputs">
-                <input type="text" placeholder="Nombre" required>
-                <input type="text" placeholder="Apellido" required>
-                <input type="email" placeholder="Correo electrónico" required >
-                <input type="password" placeholder="Contraseña" required>
-                <input type="password" placeholder="Confirmar contraseña" required >
+                <input id="nombre" type="text" name="nombre" placeholder="Nombre" required>
+                <input id="apellido" type="text" name="apellido" placeholder="Apellido" required>
+                <input id="email" type="email" name="email" placeholder="Correo electrónico" required >
+                <input id="contraseña" type="password" name="contraseña" placeholder="Contraseña" required>
+                <input type="password" name="" placeholder="Confirmar contraseña" required >
                 <label for="genero">Género</label>
-                <select name="genero" id="genero" required>
+                <select id="genero" name="genero" id="genero" required>
                     <option value=""></option>
                     <option value="masculino">Masculino</option>
                     <option value="femenino">Femenino</option>
@@ -57,5 +57,7 @@
     </ul>
     <p class="copyright">© 2024 Green Land. Todos los derechos reservados</p>
   </footer>
+  <script src="../js/register.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
