@@ -1,5 +1,5 @@
+// Se utiliza para modificar el ícono del corazón al darle click
 const icons = document.querySelectorAll("i.fa-regular");
-
 icons.forEach((icon) => {
   icon.addEventListener("click", () => {
   if(icon.classList.contains("fa-regular")) {
@@ -11,3 +11,5 @@ icons.forEach((icon) => {
   }
   });     
 });
+
+

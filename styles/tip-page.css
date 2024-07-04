@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #031f05; 
+    --secondary-color: rgba(90, 136, 0, 0.51);
+}
+
+* {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+nav {
+    background-image: url("/assets/images/IMG_9762-scaled-1200x400.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2.5rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0));
+    background-color: var(--secondary-color);
+}
+
+.redirects,
+.nav_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+nav a,
+i {
+    margin: 0 10px;
+    color: var(--primary-color);
+}
+
+.nav_buttons a:hover {
+    color: rgba(90, 136, 0, 0.51);
+    /* color: var(--primary-color); */
+}
+
+.redirects {
+    width: 70%;
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffff;
+    padding: 10px 0px;
+}
+
+h1 {
+    font-family: 'Chelsea Market', 'Montserrat', sans-serif;
+    justify-content: center;
+    text-align: center;
+    font-size: 70px;
+    color: var(--primary-color);
+    margin: 5% 0 0 1%;
+    opacity: 1;
+}
+
+h2 {
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-color);
+    padding-bottom: 4%;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1% 0;
+}
+
+.info p {
+    padding: 2%;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: rgba(201, 201, 201, 0.22);
+    color: rgb(82, 80, 80);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.315);
+    margin: auto;
+}
+
+/* MAIN */
+
+main {
+    padding: 3rem 5rem; 
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+}
+
+img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+p, ul {
+    margin: 0 0 .7rem 0;
+}
+
+.goToIndexBtn {
+    display: inline-block;
+    margin: 2rem 0 0 0;
+    padding: .3rem .8rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+
+    &:hover {
+        color: #ffffff;
+        background-color: var(--primary-color);
+    }
+}
+
