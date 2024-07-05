@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/loader.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link
       rel="shortcut icon"
@@ -16,6 +17,10 @@
     <title>Green Land</title>
   </head>
   <body>
+    <!-- Loader -->
+    <div class="spinner-overlay" id="spinnerOverlay">
+      <div class="spinner"></div>
+    </div>
     <header>
       <nav>
         <div class="container">
@@ -47,11 +52,11 @@
         <p><i class="fa-solid fa-truck"></i> Envio gratuito</p>
         <p><i class="fa-solid fa-phone"></i> Atención al cliente las 24hs</p>
         <a href="./pages/carga-productos.html">
-          <i class="fa-solid fa-arrow-rotate-left"></i> Garantía de devolución
+          <i class="fa-solid fa-arrow-rotate-left"></i> Carga de productos
         </a>
       </div>
       <section id="plantsContainer" class="plants">
-
+        <!-- Container donde se cargan los productos -->
       </section>
 
       <section class="tips">
@@ -81,6 +86,6 @@
       <p class="copyright">© 2024 Green Land. Todos los derechos reservados</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script type="module" src="./js/index.js"></script>
   </body>
 </html>

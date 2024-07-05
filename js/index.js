@@ -1,23 +1,23 @@
+import { mostrarLoader, esconderLoader } from "./loader.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  async function traerProductos() {
-  try {
-    const response = await axios.get(
-			"https://greenland-0po3.onrender.com/product"
-		);
-		const data = response.data;
-    console.log(data);
-    const plantsContainer = document.querySelector("#plantsContainer");
 
-    let productos = "";
+	async function traerProductos() {
+     mostrarLoader();
+		try {
+			const response = await axios.get(
+				"https://greenland-0po3.onrender.com/product"
+			);
+			const data = response.data;
+			const plantsContainer = document.querySelector("#plantsContainer");
 
-		data.forEach((item) => {
-
-      let options = "";
-			for (let i = 1; i <= item.stock; i++) {
-				options += `<option value="${i}">${i}</option>`;
-			}
-			 productos += `
+			let productos = "";
+			data.forEach((item) => {
+				let options = "";
+				for (let i = 1; i <= item.stock; i++) {
+					options += `<option value="${i}">${i}</option>`;
+				}
+				productos += `
             <div id="${item.id}" class="plant">
                 <img src="./assets/images/plant1.jpg"" alt="${item.nombre}">
                 <div class="productInfoContainer">
@@ -32,15 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
             </div>
         `;
-		});
+			});
 
-		plantsContainer.innerHTML = productos;
-	} catch (error) {
-		console.error(error);
+			plantsContainer.innerHTML = productos;
+      esconderLoader();
+		} catch (error) {
+			console.error(error);
+      esconderLoader();
+		}
 	}
-}
 
-traerProductos();
+	traerProductos();
 });
 
 
