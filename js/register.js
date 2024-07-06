@@ -10,10 +10,16 @@ form.addEventListener("submit", async (event) => {
     contraseña: document.getElementById("contraseña").value,
     genero: document.getElementById("genero").value,
   };
-
-  const registro = await axios.post(
-    "https://greenland-0po3.onrender.com/user/registro",
-    usuario
-  );
-  console.log(registro);
+  try {
+    const registro = await axios.post(
+      "http://localhost:3000/user/registro",
+      usuario
+    );
+    console.log(registro.data);
+    alert("Usuario registrado");
+    localStorage.setItem("token", registro.data);
+    window.location.href = "../pages/login.html";
+  } catch (error) {
+    console.log(error);
+  }
 });
