@@ -12,7 +12,7 @@ form.addEventListener("submit", async (event) => {
   };
   try {
     const registro = await axios.post(
-      "http://localhost:3000/user/registro",
+      site + "/user/registro",
       usuario
     );
     console.log(registro.data);

@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mostrarLoader();
     try {
       const response = await axios.get(
-        "http://localhost:3000/product"
+        site + "/product"
       );
       const data = response.data;
       const plantsContainer = document.querySelector("#plantsContainer");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 async function agregarProducto(idProducto, cantidad) {
   try {
     const response = await axios.post(
-      `http://localhost:3000/carrito/${idProducto}`,
+      site + `/carrito/${idProducto}`,
       {
         idProducto,
         cantidad,
@@ -71,7 +71,7 @@ plantasBoton.addEventListener("click", async () => {
   mostrarLoader();
   try {
     const response = await axios.get(
-      "http://localhost:3000/product/categoria/planta"
+      site + "/product/categoria/planta"
     );
     const data = response.data;
     console.log(data)

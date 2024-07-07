@@ -7,7 +7,7 @@ form.addEventListener("submit", async (event) => {
     const contraseña = document.getElementById("password").value;
 
     try{
-        const respuesta = await axios.post("http://localhost:3000/user/login", {
+        const respuesta = await axios.post(site + "/user/login", {
             email,
             contraseña
         });
@@ -16,6 +16,7 @@ form.addEventListener("submit", async (event) => {
         alert("Logeo Exitoso!")
         window.location.href = "../index.html";
     }catch(error){
+        alert("Correo Electrónico o Contraseña incorrectos!")
         console.log(error);
     }
 })
