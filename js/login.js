@@ -13,6 +13,8 @@ form.addEventListener("submit", async (event) => {
         });
         localStorage.setItem("token", respuesta.data);
         console.log(respuesta.data);
+        alert("Logeo Exitoso!")
+        window.location.href = "../index.html";
     }catch(error){
         console.log(error);
     }
