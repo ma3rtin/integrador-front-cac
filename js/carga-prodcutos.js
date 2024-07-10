@@ -227,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			await axios.put(`${site}/product/${productId}`, dataObject);
 			form.reset();
 			traerProductos();
-			alert("El producto se midificó con éxito");
+			alert("El producto se modificó con éxito");
 		} catch (error) {
 			console.error("Error al postear", error);
 			esconderLoader();
