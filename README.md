@@ -6,6 +6,7 @@
 - `login.html`: Página de inicio de sesión
 - `contact.html`: Página de contacto
 - `tip-page.html`: Página de consejos
+- `carga-productos.html`: Página para ver, agregar, modificar o borrar productos (ejemplo de CRUD).
 
 ## Deployment
 **El sitio se encuentra alojado [acá](https://sensational-griffin-12eb40.netlify.app/) a través de Netlify.**
