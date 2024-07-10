@@ -2,21 +2,25 @@ import { mostrarLoader, esconderLoader } from "./loader.js";
 
 document.addEventListener("DOMContentLoaded", () => {
 	esconderLoader();
-	
+
 	const resetButton = document.getElementById("reset-button");
 	resetButton.addEventListener("click", () => {
 		poneCargaProductoTitulo();
-		const submitBtn = document.getElementById("submit-btn");
-		submitBtn.style.display = "inline";
-		const modifyBtn = document.getElementById("modify-btn");
-		modifyBtn.style.display = "none";
+		cambiarEnviarModificarBoton();
 	});
 
 	function poneCargaProductoTitulo() {
 		const formTitle = document.getElementById("formTitle");
 		formTitle.textContent = "Carga producto";
 	}
-	
+
+	function cambiarEnviarModificarBoton() {
+		const submitBtn = document.getElementById("submit-btn");
+		submitBtn.style.display = "inline";
+		const modifyBtn = document.getElementById("modify-btn");
+		modifyBtn.style.display = "none";
+	}
+
 	const form = document.querySelector("#productForm");
 	// Agrega productos ------------------------------
 	form.addEventListener("submit", async (event) => {
@@ -176,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		try {
 			const response = await axios.get(`${site}/product/${id}`);
 			const data = response.data;
-			form.id = "modifyProductForm";
+			// form.id = "modifyProductForm";
 			form.setAttribute("data-id", id);
 			muestraValoresEnFormulario(data);
 			const formTitle = document.getElementById("formTitle");
@@ -196,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	modifyBtn.addEventListener("click", async () => {
 		mostrarLoader();
-		const modifyForm = document.getElementById("modifyProductForm");
+		const modifyForm = document.getElementById("productForm");
 		const productId = modifyForm.getAttribute("data-id");
 		const formData = new FormData(modifyForm);
 		const dataObject = Object.fromEntries(formData.entries());
@@ -229,7 +233,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			esconderLoader();
 			alert(error);
 		} finally {
+			modifyForm.removeAttribute("data-id");
 			poneCargaProductoTitulo();
+			cambiarEnviarModificarBoton();
 			esconderLoader();
 		}
 	});
