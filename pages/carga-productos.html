@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../styles//loader.css">
+		<link rel="stylesheet" href="../styles/carga-productos.css" />
+		<link
+			rel="shortcut icon"
+			href="/assets/images/icon.ico"
+			type="image/x-icon"
+		/>
+		<script
+			src="https://kit.fontawesome.com/73d4e66af6.js"
+			crossorigin="anonymous"
+		></script>
+		<title>Green Land</title>
+	</head>
+	<body>
+		<!-- Loader -->
+		<div class="spinner-overlay" id="spinnerOverlay">
+			<div class="spinner"></div>
+		</div>
+		<nav>
+			<h1 id="title">Green land <i class="fa-solid fa-leaf"></i></h1>
+			<ul class="redirects">
+				<li class="redirect"><a href="../index.html">Inicio</a></li>
+				<li class="redirect"><a href="./login.html">Iniciar sesión</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="container">
+				<form id="productForm" action="">
+					<h2 id ="formTitle" class="formTitle">Carga producto</h2>
+					<div class="inputs">
+						
+							<input
+								id="nombre"
+								type="text"
+								name="nombre"
+								placeholder="Nombre del producto"
+								required
+							/>
+						
+						
+							<textarea
+								id="descripcion"
+								type="text"
+								name="descripcion"
+								placeholder="Descripción del producto"
+								required
+							></textarea>
+						
+                       
+							<input
+								id="categoria"
+								type="text"
+								name="categoria"
+								placeholder="Categoria"
+								required
+							/>
+						
+						
+							<input
+								id="precio"
+								type="number"
+								name="precio"
+								placeholder="Precio"
+								step="0.01"
+								required
+							/>
+						
+						
+							<input
+								id="stock"
+								type="number"
+								name="stock"
+								placeholder="Stock"
+								required
+							/>
+						
+					</div>
+					<div class="buttons">
+						<button type="submit" id="submit-btn" class="enviar">Enviar</button>
+						<button type="button" id="modify-btn" style="display: none;" class="enviar">Modificar</button>
+						<button type="reset" id="reset-button" class="cancelar">Cancelar</button>
+					</div>
+				</form>
+			</div>
+			<section class="products-container">
+				<h2 class="formTitle">Productos cargados</h2>
+				<div class="titles-table">
+					<span>Nombre</span>
+					<span>Stock</span>
+					<span>Precio</span>
+					<span>Categoría</span>
+					<span>Descripción</span>
+					<span>Opciones</span>
+				</div>
+				<ul id="table-content" class="table-content">
+
+				</ul>
+			</section>
+		</main>
+		<footer>
+			<a href="#title" class="logo"
+				>Green land <i class="fa-solid fa-leaf"></i
+			></a>
+			<ul class="links">
+				<li class="link"><i class="fa-brands fa-facebook-f"></i> Facebook</li>
+				<li class="link"><i class="fa-brands fa-twitter"></i> Twitter</li>
+				<li class="link"><i class="fa-brands fa-instagram"></i> Instagram</li>
+			</ul>
+			<p class="copyright">© 2024 Green Land. Todos los derechos reservados</p>
+		</footer>
+
+		<!-- Modal de confirmación -->
+		<div id="confirmationModal" class="modal">
+		  <div class="modal-content">
+		    <span class="close-button">&times;</span>
+		    <p id="modal-text">¿Estás seguro de que deseas eliminar este producto?</p>
+			<div>
+				<button class="confirmDelete" id="confirmDelete">Eliminar</button>
+		    	<button class="cancelDelete" id="cancelDelete">Cancelar</button>
+			</div>	
+		  </div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="../js/env.js"></script>
+		<script type="module" src="../js/carga-prodcutos.js"></script>
+	</body>
+</html>
