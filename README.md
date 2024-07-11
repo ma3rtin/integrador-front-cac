@@ -9,7 +9,7 @@
 - `carga-productos.html`: Página para ver, agregar, modificar o borrar productos (ejemplo de CRUD).
 
 ## Deployment
-**El sitio se encuentra alojado [acá](https://sensational-griffin-12eb40.netlify.app/) a través de Netlify.**
+**El sitio se encuentra alojado [acá](https://greenlandcac.netlify.app/) a través de Netlify.**
 
 ![Requisitos](https://github.com/ma3rtin/integrador-front-cac/assets/119079697/17b91c35-37cd-4306-8778-cb9baa50ac03)
 
