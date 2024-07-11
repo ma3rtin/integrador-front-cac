@@ -12,8 +12,9 @@ form.addEventListener("submit", async (event) => {
             contraseña
         });
         localStorage.setItem("token", respuesta.data);
-        console.log(respuesta.data);
-        alert("Logeo Exitoso!")
+        localStorage.setItem("email", email);
+        //console.log(respuesta.data);
+        //alert("Logeo Exitoso!")
         window.location.href = "../index.html";
     }catch(error){
         alert("Correo Electrónico o Contraseña incorrectos!")
